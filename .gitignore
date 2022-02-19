@@ -127,3 +127,7 @@ dmypy.json
 
 # Pyre type checker
 .pyre/
+
+# Word Documents & PDFs in output dirs
+word/*.docx
+pdf/*.pdf
