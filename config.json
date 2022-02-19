@@ -1,0 +1,59 @@
+{
+    "templatePath": "./CoverLetterTemplate.docx",
+    "templateFullPath": null,
+    "wordDirPath": "./word",
+    "wordDirFullPath": null,
+    "pdfDirPath": "./pdf",
+    "pdfDirFullPath": null,
+    "contact": {
+        "name": {
+            "tag": "<NAME>",
+            "value": "xxx"
+        },
+        "location": {
+            "tag": "<LOCATION>",
+            "value": "54 MX ST."
+        },
+        "phone": {
+            "tag": "<PHONE>",
+            "value": "(XXX) XXX-XXXX"
+        },
+        "email": {
+            "tag": "<EMAIL>",
+            "value": "yyy@zzz.com"
+        },
+        "website": {
+            "tag": "<WEBSITE>",
+            "value": "www.mywebsite.com"
+        },
+        "linkedin": {
+            "tag": "<LINKEDIN>",
+            "value": "linkedin.com/in/myurl"
+        },
+        "github": {
+            "tag": "<GITHUB>",
+            "value": "github.com/myname"
+        }
+    },
+    "body": [
+        {
+            "tag": "<COMPANY NAME>",
+            "type": "input",
+            "prompt": "Company Name:"
+        },
+        {
+            "tag": "<POSITION NAME>",
+            "type": "input",
+            "prompt": "Position Name:"
+        },
+        {
+            "tag": "<REASON>",
+            "type": "choice",
+            "choice": [
+                "intern growth and development",
+                "developing for the future",
+                "hands-on development and making an impact"
+            ]
+        }
+    ]
+}
