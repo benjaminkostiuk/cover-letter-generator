@@ -26,7 +26,6 @@ class Configuration:
             "<TIMESTAMP>": datetime.now().strftime("%d-%m-%YT%H:%M:%S")
         }
 
-
     def __init__(self, config_file_name):
         # Read config json
         CONFIG_FILE = ROOT_DIR.joinpath(config_file_name).resolve()
@@ -40,14 +39,32 @@ class Configuration:
 
         # Build contact
         self.contact = Configuration.__build_contact(data['contact'])
-
+        # Save body data
         self.body = data['body']
-
         # Build defaults
         self.defaults = Configuration.__build_defaults()
+        # Set replacementas as empty dict
+        self.replacements = dict()
 
     # Prompt user for data to build body replacements
     def prompt_for_replacements(self):
-        pass
+        for replacement in self.body:
+            # Set user prompt to prompt or tag name
+            prompt = replacement['prompt'] if replacement['prompt'] else replacement['tag']
+            if replacement['type'] == 'input':
+                self.replacements[replacement['tag']] = input(f'{prompt}: ')
+            
+            elif replacement['type'] == 'choice':
+                print(prompt)
+                # Print out each choice with their index
+                for i, choice in enumerate(replacement['choice']):
+                    print(f'[{i}] {choice}')
+                chosen = input("Choice: ")
+                self.replacements[replacement['tag']] = replacement['choice'][int(chosen)]
 
-
+    # Copy over contact replacements and defaults to replacements
+    def copy_contact_and_defaults_to_replacements(self):
+        for c in self.contact:
+            self.replacements[c] = self.contact[c]
+        for d in self.defaults:
+            self.replacements[d] = self.defaults[d]
