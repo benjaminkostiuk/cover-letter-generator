@@ -39,16 +39,17 @@
         {
             "tag": "<COMPANY NAME>",
             "type": "input",
-            "prompt": "Company Name:"
+            "prompt": "Company Name"
         },
         {
             "tag": "<POSITION NAME>",
             "type": "input",
-            "prompt": "Position Name:"
+            "prompt": "Position Name"
         },
         {
             "tag": "<REASON>",
             "type": "choice",
+            "prompt": "Reason you like the position",
             "choice": [
                 "intern growth and development",
                 "developing for the future",
