@@ -40,3 +40,5 @@ document.save(doc_path)
 
 # Generate pdf
 convert(doc_path, pdf_path)
+
+print(f'Generated {doc_name}, {pdf_name}')
