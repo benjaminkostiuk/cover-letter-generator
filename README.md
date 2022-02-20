@@ -23,7 +23,7 @@ pip install -r requirements.txt
 
 - All replacements **will only occur in the body of the document** this means that you cannot use tags in the header or footer of the document. Only the body's paragraphs will be searched.
 
-- The [python-docx](https://python-docx.readthedocs.io/en/latest/) package will use the **default font** in Word when making replacement so you must set the Default Font _before_ running the script. You can do this by expanding the Font settings, selecting the font you want and clicking _Set As Default_.
+- The [python-docx](https://python-docx.readthedocs.io/en/latest/) package will use the **default font** and formatting in Word when making replacement so you must set the Default Font _before_ running the script. You can do this by expanding the Font settings, selecting the font you want and clicking _Set As Default_.
 
 ### Update config.json
 - Open the [config.json](./config.json) file and update it with the following:
