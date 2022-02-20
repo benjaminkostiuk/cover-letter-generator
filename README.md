@@ -2,7 +2,7 @@
 Quickly generate cover letters using mad lib style completions to speed up your application process. Built for Windows.
 
 ## How it works
-[Demo]
+[[Demo]](https://youtu.be/rByzDIo1LlU)
 
 The script uses a simple find-and-replace algorithm to replace all tags found in the [template file](./CoverLetterTemplate.docx), as specified by the [configuration file](./config.json) with values given by the user. The new word file with all the replacements is saved along with a .pdf version in separate directories.
 
