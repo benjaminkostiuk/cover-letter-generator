@@ -131,3 +131,6 @@ dmypy.json
 # Word Documents & PDFs in output dirs
 word/*.docx
 pdf/*.pdf
+
+# Opened cover letter doc
+~$verLetterTemplate.docx
